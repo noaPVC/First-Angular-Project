@@ -1,0 +1,111 @@
+/* about section */
+.about-section {
+  padding: 1.5rem;
+  color: #FFFFFF;
+}
+
+/* paragraph formation */
+.about-section p {
+  margin-top: 10px;
+  font-size: 0.9em;
+  width: 90%;
+}
+
+.tech-section {
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.tech-wrapper {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 10px;
+  row-gap: 2rem;
+  width: 600px;
+  margin: 2rem 0;
+}
+
+/* tech element style defs */
+
+.tech-element {
+  top: 0;
+  position: relative;
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.tech-element img {
+  top: 0;
+  width: 90px;
+  padding: 10px;
+  position: relative;
+  transition: top 0.3s ease-in-out;
+}
+
+.tech-element:hover {
+  box-shadow: rgba(0, 0, 0, 0.551) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  top: -3px;
+  transition: all 0.4s ease-in-out;
+}
+
+.tech-element:hover img{
+  top: -20px;
+  transition: top 0.3s ease-in-out;
+}
+
+/* unique stylings */
+
+.react img {
+  animation: rotate-tech 3s linear infinite;
+  animation-play-state: paused;
+}
+
+.react:hover img {
+  animation-play-state: running;
+}
+
+@keyframes rotate-tech {
+  100% {transform: rotate(1turn); }
+}
+
+.uncompleted {
+  opacity: 0.3;
+}
+
+/* media queries */
+@media screen and (max-width: 400px) {
+  .tech-wrapper {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .tech-element img {
+    width: 130px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .tech-wrapper {
+    grid-template-columns: repeat(5, auto);
+    column-gap: 1rem;
+  }
+
+  .tech-element img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-section {
+    padding: 1rem;
+  }
+
+  .about-section p {
+    width: 100%;
+  }
+}
